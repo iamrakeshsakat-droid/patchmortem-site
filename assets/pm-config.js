@@ -17,8 +17,8 @@ window.PM_CONFIG = {
      The dashboard your customers actually log into.
      Your homepage mock already references app.patchmortem.com.
   ---------------------------------------------------------- */
-  appLoginUrl:  "https://app.patchmortem.com/login",
-  appSignupUrl: "https://app.patchmortem.com/signup",
+  appSignupUrl: "contact.html",
+  appLoginUrl: "contact.html",
 
   /* ---- 2. DEMO BOOKING -------------------------------------
      Paste your scheduling link (Cal.com, Calendly, HubSpot
