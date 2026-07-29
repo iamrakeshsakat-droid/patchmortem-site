@@ -241,8 +241,10 @@ nav.scrolled{height:58px;box-shadow:0 6px 24px -16px rgba(0,0,0,.6)}
 .hub-wrap{position:relative;width:600px;height:600px;max-width:100%;margin:52px auto 0}
 /* SVG lines overlay — behind everything */
 .hub-lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:visible}
-.hub-center{width:104px;height:104px;background:linear-gradient(135deg,var(--teal),var(--teal-h));border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 0 14px rgba(13,128,128,.08),0 12px 36px -8px var(--teal-glow);z-index:2;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);animation:pulseTeal 2.8s ease-in-out infinite}
-.hub-center i{font-size:26px;color:#fff}
+.hub-center{width:104px;height:104px;background:linear-gradient(135deg,var(--teal),var(--teal-h));border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 14px rgba(13,128,128,.08),0 12px 36px -8px var(--teal-glow);z-index:2;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);animation:pulseTeal 2.8s ease-in-out infinite;padding:16px}
+.hub-center .logo{display:flex;align-items:center;justify-content:center}
+.hub-center .logo-shield img{max-width:36px;height:auto;display:block}
+.hub-center .logo-word{display:none}
 .hub-center .hub-lbl{font-size:8px;font-weight:700;color:rgba(255,255,255,.75);letter-spacing:.06em;margin-top:3px}
 .hub-tool{position:absolute;width:74px;height:74px;background:var(--surface);border:1px solid var(--border2);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;box-shadow:var(--sh-md);z-index:1;text-align:center;padding:4px;animation:gentleFloat 4s ease-in-out infinite;transition:box-shadow .25s ease,border-color .25s ease,transform .25s ease}
 .hub-tool:hover{box-shadow:var(--sh-lg);border-color:var(--teal);transform:scale(1.08) translateY(-4px)!important;cursor:pointer;z-index:3}
