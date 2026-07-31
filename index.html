@@ -415,81 +415,8 @@ footer{background:var(--surface);padding:60px 60px 32px;border-top:1px solid var
   .pricing-grid{grid-template-columns:1fr}
   .stat-inner{grid-template-columns:repeat(2,1fr)}
   .footer-top{grid-template-columns:1fr 1fr;row-gap:32px}
-  nav{grid-template-columns:1fr auto}  .nav-right{display:none}  
+  nav{grid-template-columns:1fr auto}  .nav-right{display:none}  .nav-links{display:none}
 
-/* Hamburger icon button styling */
-.hamburger {
-  display: none;
-  background: transparent;
-  border: none;
-  color: var(--ink);
-  font-size: 26px;
-  cursor: pointer;
-  padding: 6px;
-}
-
-.mobile-nav-actions {
-  display: none;
-}
-
-@media (max-width: 1100px) {
-  /* Hide desktop top-right buttons on mobile */
-  .nav-right {
-    display: none !important;
-  }
-
-  /* Show the hamburger menu button */
-  .hamburger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* Mobile slide-down drawer */
-  .nav-links {
-    display: flex !important;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    padding: 24px 28px;
-    gap: 18px;
-    align-items: flex-start;
-    
-    /* Smooth fade/slide effect */
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: opacity 0.2s ease, transform 0.2s ease;
-  }
-
-  /* Active state when opened via JS */
-  .nav-links.is-open {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
-
-  /* Container for mobile login/signup buttons inside drawer */
-  .mobile-nav-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    margin-top: 10px;
-    padding-top: 16px;
-    border-top: 1px solid var(--border);
-  }
-
-  .mobile-nav-actions .btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-  
   .demo-panel.active{grid-template-columns:1fr}
   .hub-wrap{width:600px}
 }
