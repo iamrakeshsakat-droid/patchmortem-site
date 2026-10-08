@@ -1173,22 +1173,7 @@ document.querySelectorAll('[data-count]').forEach(function(el){cntObs.observe(el
   });
 })();
 
-// pricing toggle
-var yearly={'₹99,999':'₹9,99,999','₹2,99,999':'₹29,99,999'};
-document.getElementById('billToggle').addEventListener('click',function(e){
-  var b=e.target.closest('button'); if(!b)return;
-  var mode=b.dataset.bill;
-  this.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b);});
-  document.querySelectorAll('.plan').forEach(function(pl){
-    var mo=pl.querySelector('.amt-mo'),yr=pl.querySelector('.amt-yr'),unit=pl.querySelector('.per-unit');
-    if(!mo||!yr)return;
-    mo.style.display=mode==='mo'?'inline':'none';
-    yr.style.display=mode==='yr'?'inline':'none';
-    if(unit)unit.textContent=mode==='mo'?'month':'year';
-  });
-});
 
-  
 </script>
 </body>
 </html>
