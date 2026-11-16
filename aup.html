@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Acceptable Use Policy — PatchMortem</title>
+<style>
+  :root{
+    --bg:#0B0F1A; --surface:#111827; --border:#1F2937;
+    --text:#F9FAFB; --text-muted:#9CA3AF; --green:#10B981;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+  }
+  a{color:inherit;}
+  .container{max-width:760px;margin:0 auto;padding:0 24px;}
+  header{height:56px;border-bottom:1px solid var(--border);display:flex;align-items:center;}
+  header .container{display:flex;justify-content:space-between;align-items:center;}
+  .logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;text-decoration:none;color:var(--text);}
+  .logo svg{width:20px;height:20px;}
+  .back-link{font-size:13.5px;color:var(--text-muted);text-decoration:none;}
+  .back-link:hover{color:var(--green);}
+  main{padding:64px 0 88px;}
+  h1{font-size:32px;margin-bottom:8px;}
+  .updated{font-size:13px;color:var(--text-muted);margin-bottom:40px;}
+  h2{font-size:18px;margin:36px 0 12px;color:var(--text);}
+  p, li{font-size:14.5px;color:var(--text-muted);margin-bottom:12px;}
+  ul{padding-left:20px;margin-bottom:12px;}
+  strong{color:var(--text);}
+  a.inline{color:var(--green);text-decoration:none;}
+  footer{border-top:1px solid var(--border);padding:32px 0;font-size:12.5px;color:var(--text-muted);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+      PatchMortem
+    </a>
+    <a class="back-link" href="index.html">← Back to home</a>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1>Acceptable Use Policy</h1>
+    <p class="updated">Effective date: June 2026 · Contact: <a class="inline" href="mailto:legal@patchmortem.com">legal@patchmortem.com</a></p>
+
+    <p>This Acceptable Use Policy ("AUP") governs how customers and their users may use the PatchMortem platform. By using the platform, you agree to comply with this AUP. This AUP forms part of the Terms of Service.</p>
+
+    <h2>1. Permitted Use</h2>
+    <p>You may use the PatchMortem platform for the following purposes:</p>
+    <ul>
+      <li>Installing and operating the PatchMortem agent on servers that you own or are explicitly authorised to manage</li>
+      <li>Using the platform to detect, classify, and remediate patch failures across your organisation's infrastructure</li>
+      <li>Generating compliance evidence and audit reports for your organisation's internal and regulatory purposes</li>
+      <li>Managing user access within your tenant for personnel within your organisation</li>
+    </ul>
+
+    <h2>2. Prohibited Use</h2>
+    <p>You must not use the PatchMortem platform to:</p>
+    <ul>
+      <li><strong>Install the agent on third-party systems</strong> without the explicit written authorisation of the system owner</li>
+      <li><strong>Misrepresent compliance status</strong> — using audit trail data or compliance reports to make false or misleading claims to regulators, auditors, or customers</li>
+      <li><strong>Reverse engineer</strong> the platform, its agent, or any of its APIs beyond what is permitted under applicable law</li>
+      <li><strong>Resell or sublicense access</strong> to the platform without an executed partner or reseller agreement with Zurlux Technologies</li>
+      <li><strong>Use the platform to attack or probe other systems</strong> — including using the agent deployment infrastructure as a mechanism to gain unauthorised access to endpoints</li>
+      <li>Circumvent, disable, or interfere with security controls or audit mechanisms within the platform</li>
+      <li>Upload or transmit malware, ransomware, or any malicious code through the platform</li>
+    </ul>
+
+    <h2>3. Agent Deployment</h2>
+    <p>The PatchMortem agent must only be deployed on endpoints that are:</p>
+    <ul>
+      <li>Within your own organisation's infrastructure (owned or leased hardware, or cloud instances within your cloud accounts), or</li>
+      <li>Endpoints of your customers, where you have an active managed services agreement explicitly authorising you to deploy monitoring agents on their behalf</li>
+    </ul>
+    <p>Mass or automated deployment across endpoints you do not have authority over — regardless of technical feasibility — is prohibited and may constitute an offence under the Information Technology Act, 2000.</p>
+
+    <h2>4. Data Accuracy</h2>
+    <p>You are responsible for ensuring that device information registered on the platform is accurate and up to date. Registering fictional, spoofed, or third-party hostnames with the intent to generate false compliance evidence is a violation of this AUP and the Terms of Service.</p>
+
+    <h2>5. Legal Compliance</h2>
+    <p>You are responsible for ensuring that your use of PatchMortem complies with all applicable laws and regulations in your jurisdiction, including but not limited to:</p>
+    <ul>
+      <li>The Digital Personal Data Protection Act, 2023 (DPDP Act)</li>
+      <li>The Information Technology Act, 2000 and its amendments</li>
+      <li>Sector-specific regulations applicable to your organisation (e.g. RBI IT Framework, SEBI guidelines, IRDAI circulars)</li>
+    </ul>
+
+    <h2>6. Enforcement</h2>
+    <p>Violation of this AUP may result in, at PatchMortem's sole discretion:</p>
+    <ul>
+      <li>Immediate suspension of your account without prior notice</li>
+      <li>Permanent termination of your subscription without refund</li>
+      <li>Referral to law enforcement where the violation constitutes a criminal offence</li>
+    </ul>
+    <p>PatchMortem reserves the right to investigate suspected violations and to cooperate with law enforcement agencies.</p>
+
+    <h2>7. Contact</h2>
+    <p>To report a suspected AUP violation or to seek clarification on permitted use, contact us at <a class="inline" href="mailto:legal@patchmortem.com">legal@patchmortem.com</a>.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="container">© 2026 Zurlux Technologies Private Limited</div>
+</footer>
+
+</body>
+</html>

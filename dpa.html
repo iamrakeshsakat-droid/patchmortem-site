@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Data Processing Agreement — PatchMortem</title>
+<style>
+  :root{
+    --bg:#0B0F1A; --surface:#111827; --border:#1F2937;
+    --text:#F9FAFB; --text-muted:#9CA3AF; --green:#10B981;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+  }
+  a{color:inherit;}
+  .container{max-width:760px;margin:0 auto;padding:0 24px;}
+  header{height:56px;border-bottom:1px solid var(--border);display:flex;align-items:center;}
+  header .container{display:flex;justify-content:space-between;align-items:center;}
+  .logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;text-decoration:none;color:var(--text);}
+  .logo svg{width:20px;height:20px;}
+  .back-link{font-size:13.5px;color:var(--text-muted);text-decoration:none;}
+  .back-link:hover{color:var(--green);}
+  main{padding:64px 0 88px;}
+  h1{font-size:32px;margin-bottom:8px;}
+  .updated{font-size:13px;color:var(--text-muted);margin-bottom:40px;}
+  h2{font-size:18px;margin:36px 0 12px;color:var(--text);}
+  p, li{font-size:14.5px;color:var(--text-muted);margin-bottom:12px;}
+  ul{padding-left:20px;margin-bottom:12px;}
+  strong{color:var(--text);}
+  a.inline{color:var(--green);text-decoration:none;}
+  table{width:100%;border-collapse:collapse;margin-bottom:16px;}
+  th{text-align:left;font-size:12px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;padding:8px 12px;border-bottom:1px solid var(--border);}
+  td{font-size:14px;color:var(--text-muted);padding:10px 12px;border-bottom:1px solid var(--border);}
+  td strong{color:var(--text);}
+  .sig-block{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:12px;}
+  .sig-field{border-top:1px solid var(--border);padding-top:8px;font-size:13px;color:var(--text-muted);}
+  footer{border-top:1px solid var(--border);padding:32px 0;font-size:12.5px;color:var(--text-muted);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+      PatchMortem
+    </a>
+    <a class="back-link" href="index.html">← Back to home</a>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1>Data Processing Agreement</h1>
+    <p class="updated">Effective date: June 2026 · Contact: <a class="inline" href="mailto:dpa@patchmortem.com">dpa@patchmortem.com</a></p>
+
+    <p>This Data Processing Agreement ("DPA") forms part of the agreement between the customer ("Data Controller") and Zurlux Technologies Private Limited ("Data Processor", operating as PatchMortem) for the provision of the PatchMortem platform. It governs the processing of personal and technical data on behalf of the Data Controller in accordance with the Digital Personal Data Protection Act, 2023 (DPDP Act).</p>
+
+    <h2>1. Parties</h2>
+    <p><strong>Data Controller:</strong> The customer entity that has subscribed to the PatchMortem service and accepted the Terms of Service.</p>
+    <p><strong>Data Processor:</strong> Zurlux Technologies Private Limited, a company incorporated in India, operating the PatchMortem platform.</p>
+
+    <h2>2. Subject Matter</h2>
+    <p>The subject matter of processing under this DPA is the provision of the PatchMortem platform, which includes:</p>
+    <ul>
+      <li>Patch failure detection and root-cause classification on registered endpoints</li>
+      <li>Automated rollback orchestration based on topology-aware failure analysis</li>
+      <li>Compliance reporting and cryptographic audit evidence generation</li>
+    </ul>
+
+    <h2>3. Data Categories Processed</h2>
+    <p>In the course of providing the service, the Data Processor processes the following categories of technical data from the Data Controller's infrastructure:</p>
+    <ul>
+      <li><strong>Hostnames</strong> and internal endpoint identifiers</li>
+      <li><strong>Operating system types and versions</strong></li>
+      <li><strong>Patch and update reference identifiers</strong> (e.g. KB numbers, RHEL errata IDs)</li>
+      <li><strong>Process names</strong> and service states relevant to patch diagnostics</li>
+      <li><strong>Error codes</strong> returned by patch operations</li>
+      <li><strong>IP addresses</strong> of registered endpoints and platform users</li>
+      <li>Timestamps, approval records, and cryptographic hashes forming the audit trail</li>
+    </ul>
+    <p><strong>Explicit exclusion:</strong> The PatchMortem agent does not collect, transmit, or store personal files, file contents, end-user documents, user credentials, or any data unrelated to patch management operations. These exclusions are enforced at the agent level and are not configurable.</p>
+
+    <h2>4. Processing Purposes</h2>
+    <p>Data is processed solely for the purpose of providing the PatchMortem service as described in the Terms of Service. The Data Processor will not process data for any secondary purpose including advertising, profiling, sale to third parties, or any use unrelated to delivering the contracted service.</p>
+
+    <h2>5. Duration</h2>
+    <p>Processing under this DPA continues for the duration of the Data Controller's active subscription. Upon termination of the subscription, operational data will be retained for 90 days to allow for data export, after which it will be deleted or anonymised. Audit trail records subject to regulatory retention obligations (7 years under RBI IT Framework) are exempted from this deletion schedule.</p>
+
+    <h2>6. Sub-processors</h2>
+    <p>The Data Processor engages the following sub-processors to provide the service. The Data Controller provides general authorisation for the use of these sub-processors:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Sub-processor</th>
+          <th>Purpose</th>
+          <th>Location</th>
+          <th>DPA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Amazon Web Services</strong></td>
+          <td>Cloud hosting and infrastructure (ap-south-1, Mumbai)</td>
+          <td>India (Mumbai)</td>
+          <td><a class="inline" href="https://aws.amazon.com/compliance/data-privacy-faq/" target="_blank" rel="noopener">AWS DPA</a></td>
+        </tr>
+        <tr>
+          <td><strong>Anthropic</strong></td>
+          <td>AI-powered patch failure classification</td>
+          <td>United States</td>
+          <td><a class="inline" href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic Privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>Pinecone</strong></td>
+          <td>Vector search for failure pattern matching</td>
+          <td>United States</td>
+          <td><a class="inline" href="https://www.pinecone.io/privacy/" target="_blank" rel="noopener">Pinecone Privacy</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The Data Processor will notify the Data Controller of any material changes to the sub-processor list with at least 14 days' notice.</p>
+
+    <h2>7. Data Subject Rights</h2>
+    <p>The Data Controller is responsible for receiving and handling data subject rights requests from its employees or end-users (including rights of access, correction, and erasure under the DPDP Act). The Data Processor will provide reasonable technical assistance to the Data Controller in fulfilling such requests within <strong>72 hours</strong> of receiving a written request from the Data Controller.</p>
+
+    <h2>8. Security Measures</h2>
+    <p>The Data Processor maintains the following technical and organisational security measures:</p>
+    <ul>
+      <li><strong>In transit:</strong> TLS 1.2 or higher for all data transmission between the agent, collector, and platform services</li>
+      <li><strong>At rest:</strong> AES-256 encryption for all stored data on AWS RDS and S3</li>
+      <li><strong>Audit integrity:</strong> HMAC-SHA256 chained audit records ensuring tamper-evidence</li>
+      <li><strong>Access controls:</strong> Role-based access (IT_ADMIN, ENGINEER, VIEWER), session timeouts, CSRF protection</li>
+      <li><strong>Vulnerability management:</strong> Annual Vulnerability Assessment and Penetration Testing (VAPT) by an accredited firm</li>
+    </ul>
+
+    <h2>9. Audit Trail Immutability</h2>
+    <p>The PatchMortem audit trail (stored in <code>audit_trail.records</code>) is designed to be append-only and cannot be deleted by either party. This immutability is intentional and required for compliance with the RBI IT Framework, which mandates tamper-evident records for regulated financial entities.</p>
+    <p>Accordingly, the right to erasure under the DPDP Act applies to <strong>operational data</strong> (telemetry, device records, user accounts) but does not extend to the audit trail. This limitation is disclosed at onboarding. Data Controllers who require audit trail exclusion should not use the service.</p>
+
+    <h2>10. Breach Notification</h2>
+    <p>In the event of a personal data breach affecting the Data Controller's data, the Data Processor will notify the Data Controller within <strong>72 hours</strong> of becoming aware of the breach. The notification will include: the nature of the breach, the categories and approximate number of data records affected, the likely consequences, and the measures taken or proposed to address the breach.</p>
+
+    <h2>11. Governing Law</h2>
+    <p>This DPA is governed by the laws of India. Any disputes arising under this DPA shall be subject to the exclusive jurisdiction of the Courts of Mumbai, Maharashtra.</p>
+
+    <h2>12. Signatures</h2>
+    <p>By executing this DPA (or by accepting the Terms of Service, which incorporates this DPA by reference), both parties agree to the terms herein.</p>
+    <div class="sig-block">
+      <div>
+        <p style="margin-bottom:48px;"><strong>Data Controller</strong></p>
+        <div class="sig-field">Authorised signatory name</div>
+        <div class="sig-field" style="margin-top:24px;">Designation</div>
+        <div class="sig-field" style="margin-top:24px;">Date</div>
+      </div>
+      <div>
+        <p style="margin-bottom:48px;"><strong>Data Processor</strong><br><span style="font-size:13px;color:var(--text-muted);">Zurlux Technologies Private Limited</span></p>
+        <div class="sig-field">Authorised signatory name</div>
+        <div class="sig-field" style="margin-top:24px;">Designation</div>
+        <div class="sig-field" style="margin-top:24px;">Date</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">© 2026 Zurlux Technologies Private Limited · <a class="inline" href="mailto:dpa@patchmortem.com">dpa@patchmortem.com</a></div>
+</footer>
+
+</body>
+</html>

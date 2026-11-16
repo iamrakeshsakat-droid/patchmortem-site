@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Incident Response Policy — PatchMortem</title>
+<style>
+  :root{
+    --bg:#0B0F1A; --surface:#111827; --border:#1F2937;
+    --text:#F9FAFB; --text-muted:#9CA3AF; --green:#10B981;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+  }
+  a{color:inherit;}
+  .container{max-width:760px;margin:0 auto;padding:0 24px;}
+  header{height:56px;border-bottom:1px solid var(--border);display:flex;align-items:center;}
+  header .container{display:flex;justify-content:space-between;align-items:center;}
+  .logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;text-decoration:none;color:var(--text);}
+  .logo svg{width:20px;height:20px;}
+  .back-link{font-size:13.5px;color:var(--text-muted);text-decoration:none;}
+  .back-link:hover{color:var(--green);}
+  main{padding:64px 0 88px;}
+  h1{font-size:32px;margin-bottom:8px;}
+  .updated{font-size:13px;color:var(--text-muted);margin-bottom:40px;}
+  h2{font-size:18px;margin:36px 0 12px;color:var(--text);}
+  p, li{font-size:14.5px;color:var(--text-muted);margin-bottom:12px;}
+  ul{padding-left:20px;margin-bottom:12px;}
+  strong{color:var(--text);}
+  a.inline{color:var(--green);text-decoration:none;}
+  table{width:100%;border-collapse:collapse;margin-bottom:16px;}
+  th{text-align:left;font-size:12px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;padding:8px 12px;border-bottom:1px solid var(--border);}
+  td{font-size:14px;color:var(--text-muted);padding:10px 12px;border-bottom:1px solid var(--border);}
+  td strong{color:var(--text);}
+  footer{border-top:1px solid var(--border);padding:32px 0;font-size:12.5px;color:var(--text-muted);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+      PatchMortem
+    </a>
+    <a class="back-link" href="index.html">← Back to home</a>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1>Incident Response Policy</h1>
+    <p class="updated">Effective date: June 2026 · Contact: <a class="inline" href="mailto:security@patchmortem.com">security@patchmortem.com</a></p>
+
+    <h2>1. Purpose</h2>
+    <p>This policy describes how Zurlux Technologies Private Limited ("PatchMortem") detects, responds to, and communicates security incidents that affect the PatchMortem platform and its customers. Our goal is to minimise impact, restore service quickly, and communicate transparently throughout the incident lifecycle.</p>
+
+    <h2>2. Scope</h2>
+    <p>This policy covers all incidents affecting the PatchMortem platform, including:</p>
+    <ul>
+      <li><strong>Data breaches</strong> — unauthorised access to, or disclosure of, customer data</li>
+      <li><strong>Service outages</strong> — complete or partial unavailability of the platform</li>
+      <li><strong>Security vulnerabilities</strong> — confirmed vulnerabilities in the platform or its dependencies</li>
+      <li><strong>Unauthorised access</strong> — any access to customer tenants or internal systems not authorised by the account holder</li>
+    </ul>
+
+    <h2>3. Incident Classification</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Severity</th>
+          <th>Definition</th>
+          <th>Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>P0 — Critical</strong></td>
+          <td>Data breach or confirmed unauthorised access to customer data</td>
+          <td>Exfiltration of audit records, credential compromise, tenant data exposed</td>
+        </tr>
+        <tr>
+          <td><strong>P1 — High</strong></td>
+          <td>Complete service outage lasting more than 1 hour</td>
+          <td>API unavailable, database unreachable, all agent heartbeats failing</td>
+        </tr>
+        <tr>
+          <td><strong>P2 — Medium</strong></td>
+          <td>Degraded performance or partial feature unavailability</td>
+          <td>Slow response times, notification delivery delayed, reporting unavailable</td>
+        </tr>
+        <tr>
+          <td><strong>P3 — Low</strong></td>
+          <td>Minor issues with minimal customer impact</td>
+          <td>UI display issues, non-critical background job failures</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>4. Response Timelines</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Severity</th>
+          <th>Acknowledgement</th>
+          <th>Customer Notification</th>
+          <th>Resolution Target</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>P0</strong></td>
+          <td>Immediate</td>
+          <td>Within 72 hours of awareness</td>
+          <td>Best effort, continuous</td>
+        </tr>
+        <tr>
+          <td><strong>P1</strong></td>
+          <td>Within 4 hours</td>
+          <td>Status page update within 4 hours</td>
+          <td>Within 8 hours</td>
+        </tr>
+        <tr>
+          <td><strong>P2</strong></td>
+          <td>Within 8 hours</td>
+          <td>Status page update within 8 hours</td>
+          <td>Within 48 hours</td>
+        </tr>
+        <tr>
+          <td><strong>P3</strong></td>
+          <td>Next business day</td>
+          <td>At resolution</td>
+          <td>Next sprint cycle</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>5. Notification Process</h2>
+    <p>Affected customers will be notified through the following channels:</p>
+    <ul>
+      <li><strong>Registered email</strong> — notification sent to the primary contact address on the account</li>
+      <li><strong>In-app banner</strong> — persistent banner visible on the PatchMortem dashboard for active incidents</li>
+      <li><strong>Status page</strong> — real-time updates at <span style="font-family:monospace;color:var(--green);">status.patchmortem.com</span></li>
+    </ul>
+    <p>For P0 incidents involving personal data, notification will comply with obligations under the Digital Personal Data Protection Act, 2023.</p>
+
+    <h2>6. Customer Responsibilities</h2>
+    <p>Customers are expected to:</p>
+    <ul>
+      <li>Maintain accurate and up-to-date contact information in the PatchMortem dashboard</li>
+      <li>Designate at least one IT contact for incident communication</li>
+      <li>Respond promptly to PatchMortem requests for information during active incidents affecting their infrastructure</li>
+      <li>Report suspected security incidents or vulnerabilities to <a class="inline" href="mailto:security@patchmortem.com">security@patchmortem.com</a></li>
+    </ul>
+
+    <h2>7. Post-Incident Review</h2>
+    <p>For P0 and P1 incidents, PatchMortem will publish a root cause analysis (RCA) within <strong>14 calendar days</strong> of incident resolution. The RCA will include: a timeline of events, the root cause, remediation steps taken, and preventive measures implemented. RCAs are shared directly with affected customers and published to the status page.</p>
+
+    <h2>8. Contact</h2>
+    <p>To <strong>report a security vulnerability</strong>: <a class="inline" href="mailto:security@patchmortem.com">security@patchmortem.com</a></p>
+    <p>To <strong>enquire about an ongoing incident</strong>: <a class="inline" href="mailto:incidents@patchmortem.com">incidents@patchmortem.com</a></p>
+  </div>
+</main>
+
+<footer>
+  <div class="container">© 2026 Zurlux Technologies Private Limited</div>
+</footer>
+
+</body>
+</html>

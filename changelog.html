@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Changelog — PatchMortem</title>
+<meta name="description" content="What's new in PatchMortem — release notes and feature updates." />
+<style>
+  :root{--bg:#0B0F1A;--surface:#111827;--border:#1F2937;--text:#F9FAFB;--text-muted:#9CA3AF;--green:#10B981;--amber:#FBBF24;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  .container{max-width:760px;margin:0 auto;padding:0 24px;}
+
+  /* Nav */
+  nav{position:sticky;top:0;z-index:100;border-bottom:1px solid var(--border);background:rgba(11,15,26,.92);backdrop-filter:blur(12px);}
+  nav .inner{display:flex;align-items:center;justify-content:space-between;height:56px;max-width:1180px;margin:0 auto;padding:0 24px;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;}
+  .logo svg{width:22px;height:22px;}
+  .nav-links{display:flex;gap:20px;font-size:14px;color:var(--text-muted);}
+  .nav-links a:hover{color:var(--text);}
+  .login-link{font-size:14px;color:var(--green);font-weight:600;}
+
+  /* Hero */
+  .hero{padding:72px 0 48px;border-bottom:1px solid var(--border);}
+  .hero .eyebrow{font-size:12px;font-weight:600;color:var(--green);letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px;}
+  .hero h1{font-size:36px;font-weight:800;letter-spacing:-.02em;margin-bottom:12px;}
+  .hero p{font-size:16px;color:var(--text-muted);}
+
+  /* Releases */
+  .release{padding:48px 0;border-bottom:1px solid var(--border);}
+  .release:last-child{border-bottom:none;}
+  .release-header{display:flex;align-items:baseline;gap:16px;margin-bottom:24px;}
+  .release-version{font-size:22px;font-weight:800;color:var(--text);letter-spacing:-.01em;}
+  .release-date{font-size:13px;color:var(--text-muted);}
+  .release-tag{display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#10B98120;color:var(--green);border:1px solid #10B98140;}
+  .section-label{font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;font-family:monospace;}
+  .feature-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:24px;}
+  .feature-list li{display:flex;gap:10px;font-size:14px;color:var(--text-muted);}
+  .feature-list li::before{content:"·";color:var(--green);flex-shrink:0;font-size:18px;line-height:1.4;}
+
+  /* Footer */
+  footer{border-top:1px solid var(--border);padding:48px 0;}
+  footer .inner{max-width:1180px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;}
+  .footer-logo{font-weight:700;font-size:15px;margin-bottom:8px;}
+  .footer-sub{font-size:12px;color:var(--text-muted);}
+  .footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+  .footer-links a{font-size:13px;color:var(--text-muted);}
+  .footer-links a:hover{color:var(--text);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+      PatchMortem
+    </a>
+    <div class="nav-links">
+      <a href="index.html#product">Product</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="rbi-compliance.html">RBI Compliance</a>
+      <a href="changelog.html" style="color:var(--text)">Changelog</a>
+    </div>
+    <a class="login-link" href="https://app.patchmortem.com/login">Login →</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="container">
+    <div class="eyebrow">Release notes</div>
+    <h1>Changelog</h1>
+    <p>Every improvement, feature, and fix — in order.</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="release">
+    <div class="release-header">
+      <span class="release-version">v0.9.0</span>
+      <span class="release-date">June 2026</span>
+      <span class="release-tag">Latest</span>
+    </div>
+    <div class="section-label">New features</div>
+    <ul class="feature-list">
+      <li>PatchGuard AI agent — contextual help on every dashboard page, powered by Groq/Claude with full data anonymisation</li>
+      <li>Asset tagging with JSONB storage and multi-tag filter support</li>
+      <li>Patch wave time scheduling with configurable blackout windows</li>
+      <li>Self-serve trial signup and plan management</li>
+      <li>Razorpay billing stub with webhook handling</li>
+      <li>Usage metering per tenant with per-plan limits enforced at API level</li>
+      <li>Classification feedback loop — engineers can flag incorrect AI classifications</li>
+    </ul>
+  </div>
+
+  <div class="release">
+    <div class="release-header">
+      <span class="release-version">v0.8.0</span>
+      <span class="release-date">June 2026</span>
+    </div>
+    <div class="section-label">New features</div>
+    <ul class="feature-list">
+      <li>Dashboard UX rebuild — collapsible sidebar, KPI cards, compliance gauges, dark theme system tokens</li>
+      <li>Password reset flow with tokenised email links</li>
+      <li>User invitation system with RDS persistence and 48-hour expiry</li>
+      <li>Brute force login protection (rate limiting + account lockout)</li>
+      <li>CSRF + XSS protection across all form inputs</li>
+      <li>Audit trail search with date range filters and URL-synced state</li>
+    </ul>
+  </div>
+
+  <div class="release">
+    <div class="release-header">
+      <span class="release-version">v0.7.0</span>
+      <span class="release-date">May 2026</span>
+    </div>
+    <div class="section-label">New features</div>
+    <ul class="feature-list">
+      <li>Asset registry RDS persistence — live device inventory stored in PostgreSQL (FIX-A)</li>
+      <li>Notifications, planner, and scraper RDS persistence (FIX-B)</li>
+      <li>Marketing home page with pricing tiers and demo request form</li>
+      <li>Post-login onboarding wizard for new tenant setup</li>
+      <li>Legal documents — Privacy Policy, Terms of Service, DPA, AUP</li>
+    </ul>
+  </div>
+
+  <div class="release">
+    <div class="release-header">
+      <span class="release-version">v0.1.0</span>
+      <span class="release-date">April 2026</span>
+      <span class="release-tag" style="background:#1e90ff20;color:#1e90ff;border-color:#1e90ff40;">Initial release</span>
+    </div>
+    <div class="section-label">Core platform</div>
+    <ul class="feature-list">
+      <li>8-layer architecture: classifier, rollback engine, audit writer, predictive engine, compliance engine, marketplace, asset registry, patch planner</li>
+      <li>Go agent with heartbeat and patch failure detection</li>
+      <li>HMAC-SHA256 cryptographic audit chain with tamper detection</li>
+      <li>Four-eyes approval enforcement for production rollbacks</li>
+      <li>PCI DSS 6.3, HIPAA 164.312(b), SOC2 CC7.2 compliance report generation</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <div class="inner">
+    <div>
+      <div class="footer-logo">PatchMortem</div>
+      <div class="footer-sub">ZURLUX TECHNOLOGIES PRIVATE LIMITED</div>
+      <div class="footer-sub">© 2026 All rights reserved.</div>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="dpa.html">DPA</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="aup.html">Acceptable Use</a>
+      <a href="rbi-compliance.html">RBI Compliance</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="security.html">Security</a>
+      <a href="status.html">System Status</a>
+      <a href="mailto:contact@patchmortem.com">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

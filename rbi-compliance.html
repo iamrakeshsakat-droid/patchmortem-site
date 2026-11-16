@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RBI IT Framework 2023 Compliance — PatchMortem</title>
+<meta name="description" content="PatchMortem generates cryptographic proof of RBI IT Framework 2023 compliance — automatically. Built for Indian BFSI." />
+<style>
+  :root{--bg:#0B0F1A;--surface:#111827;--border:#1F2937;--text:#F9FAFB;--text-muted:#9CA3AF;--green:#10B981;--amber:#FBBF24;--blue:#1e90ff;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  .container{max-width:1100px;margin:0 auto;padding:0 24px;}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:600;color:var(--green);letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px;}
+  h1{font-size:40px;font-weight:800;letter-spacing:-.02em;line-height:1.15;}
+  h2{font-size:28px;font-weight:700;letter-spacing:-.01em;margin-bottom:12px;}
+  h3{font-size:18px;font-weight:700;margin-bottom:8px;}
+  section{padding:80px 0;border-bottom:1px solid var(--border);}
+  section:last-of-type{border-bottom:none;}
+
+  /* Nav */
+  nav{position:sticky;top:0;z-index:100;border-bottom:1px solid var(--border);background:rgba(11,15,26,.92);backdrop-filter:blur(12px);}
+  nav .inner{display:flex;align-items:center;justify-content:space-between;height:56px;max-width:1180px;margin:0 auto;padding:0 24px;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;}
+  .logo svg{width:22px;height:22px;}
+  .nav-links{display:flex;gap:20px;font-size:14px;color:var(--text-muted);}
+  .nav-links a:hover{color:var(--text);}
+  .login-link{font-size:14px;color:var(--green);font-weight:600;}
+
+  /* Hero */
+  .hero{padding:88px 0 72px;}
+  .hero-sub{font-size:18px;color:var(--text-muted);max-width:640px;margin:20px 0 36px;}
+  .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:var(--green);color:#000;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer;}
+  .btn-primary:hover{opacity:.9;}
+  .hero-note{margin-top:16px;font-size:13px;color:var(--text-muted);}
+
+  /* Requirements list */
+  .req-list{display:flex;flex-direction:column;gap:12px;margin-top:24px;}
+  .req-item{display:flex;gap:12px;padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-radius:10px;}
+  .req-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+  .req-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:3px;}
+  .req-desc{font-size:13px;color:var(--text-muted);}
+
+  /* Mapping table */
+  .table-wrap{overflow-x:auto;margin-top:28px;}
+  table{width:100%;border-collapse:collapse;}
+  th{padding:10px 16px;text-align:left;font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--border);white-space:nowrap;}
+  td{padding:14px 16px;font-size:13px;border-bottom:1px solid var(--border);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  .td-req{color:var(--text);font-weight:500;}
+  .td-feat{color:var(--green);}
+  .td-ev{color:var(--text-muted);}
+
+  /* Audit Q&A */
+  .qa-list{display:flex;flex-direction:column;gap:20px;margin-top:24px;}
+  .qa-item{padding:20px 24px;background:var(--surface);border:1px solid var(--border);border-radius:10px;}
+  .qa-q{font-size:14px;font-weight:700;color:var(--text);margin-bottom:10px;}
+  .qa-a{font-size:13px;color:var(--text-muted);line-height:1.65;}
+  .qa-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;font-family:monospace;background:#10B98120;color:var(--green);border:1px solid #10B98140;margin-top:8px;}
+
+  /* CTA */
+  .cta-box{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:48px;text-align:center;}
+  .cta-box h2{margin-bottom:16px;}
+  .cta-box p{font-size:16px;color:var(--text-muted);margin-bottom:32px;}
+
+  /* Footer */
+  footer{border-top:1px solid var(--border);padding:48px 0;}
+  footer .inner{max-width:1180px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;}
+  .footer-logo{font-weight:700;font-size:15px;margin-bottom:8px;}
+  .footer-sub{font-size:12px;color:var(--text-muted);}
+  .footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+  .footer-links a{font-size:13px;color:var(--text-muted);}
+  .footer-links a:hover{color:var(--text);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+      PatchMortem
+    </a>
+    <div class="nav-links">
+      <a href="index.html#product">Product</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="rbi-compliance.html" style="color:var(--text)">RBI Compliance</a>
+      <a href="changelog.html">Changelog</a>
+    </div>
+    <a class="login-link" href="https://app.patchmortem.com/login">Login →</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">RBI IT Framework 2023</div>
+    <h1>Cryptographic proof of compliance.<br>Generated automatically.</h1>
+    <p class="hero-sub">PatchMortem turns your patch management process into a continuous, tamper-evident compliance record — giving your CISO and auditors the evidence they need, with zero manual effort.</p>
+    <a href="index.html#demo" class="btn-primary">Request a demo for your RBI audit team →</a>
+    <p class="hero-note">Used by BFSI teams across India · RBI IT Framework 2023 aligned</p>
+  </div>
+</section>
+
+<!-- Section 1: What RBI requires -->
+<section>
+  <div class="container">
+    <div class="eyebrow">What the RBI IT Framework 2023 requires</div>
+    <h2>The five patch management mandates</h2>
+    <p style="color:var(--text-muted);font-size:16px;max-width:680px;margin-bottom:8px;">The RBI IT Framework 2023 (successor to the 2011 IT Policy guidelines) explicitly mandates the following for all regulated banks and NBFCs.</p>
+    <div class="req-list">
+      <div class="req-item">
+        <div class="req-icon">📋</div>
+        <div>
+          <div class="req-title">Documented patch management process</div>
+          <div class="req-desc">Regulated entities must have a documented, board-approved patch management policy covering identification, testing, deployment, and verification of patches across all IT assets.</div>
+        </div>
+      </div>
+      <div class="req-item">
+        <div class="req-icon">🧪</div>
+        <div>
+          <div class="req-title">Evidence of patch testing before deployment</div>
+          <div class="req-desc">Every patch must be tested in a non-production environment before deployment to production. Testing outcomes must be documented and available for audit inspection.</div>
+        </div>
+      </div>
+      <div class="req-item">
+        <div class="req-icon">🔗</div>
+        <div>
+          <div class="req-title">Audit trail of all patch activities</div>
+          <div class="req-desc">A complete, tamper-evident record of every patch activity — who applied it, when, on which asset, and what the outcome was — must be maintained and available for at least 7 years.</div>
+        </div>
+      </div>
+      <div class="req-item">
+        <div class="req-icon">🚨</div>
+        <div>
+          <div class="req-title">Incident response for patch failures</div>
+          <div class="req-desc">Failed patches must trigger a documented incident response process with defined escalation paths, rollback procedures, and root cause analysis.</div>
+        </div>
+      </div>
+      <div class="req-item">
+        <div class="req-icon">📊</div>
+        <div>
+          <div class="req-title">Board-level reporting on IT risk</div>
+          <div class="req-desc">The Board or IT Strategy Committee must receive regular reports on patch compliance status, outstanding vulnerabilities, and remediation timelines.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: How PatchMortem satisfies each requirement -->
+<section>
+  <div class="container">
+    <div class="eyebrow">How PatchMortem satisfies each requirement</div>
+    <h2>Requirement → Feature → Evidence</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>RBI Requirement</th>
+            <th>PatchMortem Feature</th>
+            <th>Evidence Generated</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-req">Documented patch management process</td>
+            <td class="td-feat">Wave Planner + four-eyes approval workflow</td>
+            <td class="td-ev">Wave plan PDF with approval signatures, timestamps, and scope</td>
+          </tr>
+          <tr>
+            <td class="td-req">Pre-deployment testing evidence</td>
+            <td class="td-feat">Predictive risk scoring engine — classifies every patch before deployment</td>
+            <td class="td-ev">Risk assessment report with confidence score, failure prediction, and classification reasoning</td>
+          </tr>
+          <tr>
+            <td class="td-req">Tamper-evident audit trail</td>
+            <td class="td-feat">HMAC-SHA256 cryptographic audit chain — every event signed and chained</td>
+            <td class="td-ev">Cryptographically verifiable audit export (JSON + CEF) readable by Splunk, QRadar, and Microsoft Sentinel</td>
+          </tr>
+          <tr>
+            <td class="td-req">Incident response for patch failures</td>
+            <td class="td-feat">Automated rollback engine + notifications + root cause analysis</td>
+            <td class="td-ev">Incident timeline PDF with detection time, rollback steps, and root cause report</td>
+          </tr>
+          <tr>
+            <td class="td-req">Board-level IT risk reporting</td>
+            <td class="td-feat">Compliance dashboard with one-click report generation</td>
+            <td class="td-ev">One-click compliance report (PCI DSS, HIPAA, SOC 2) with board-ready executive summary</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Auditor Q&A -->
+<section>
+  <div class="container">
+    <div class="eyebrow">Audit readiness</div>
+    <h2>What your auditor will ask for — and where to find it</h2>
+    <p style="color:var(--text-muted);font-size:16px;max-width:680px;margin-bottom:8px;">These are the five most common questions RBI IT auditors ask about patch management. Here is exactly how PatchMortem answers each one.</p>
+    <div class="qa-list">
+      <div class="qa-item">
+        <div class="qa-q">"Show me your patch management policy and approval records."</div>
+        <div class="qa-a">Every rollback and remediation action requires explicit four-eyes approval. The approver name, timestamp, IP address, and decision rationale are recorded in the cryptographic audit chain. Export the full audit log from the Audit Trail page in under 60 seconds.</div>
+        <div class="qa-badge">Audit Trail → Export</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">"How do you test patches before production deployment?"</div>
+        <div class="qa-a">PatchMortem's predictive engine classifies every patch before deployment using a 5-stage AI pipeline — extracting signals, matching against a failure taxonomy, and scoring risk. The classification and confidence score are attached to every patch record as evidence of pre-deployment assessment.</div>
+        <div class="qa-badge">Risk Predict → Assessment Report</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">"Prove your audit trail has not been tampered with."</div>
+        <div class="qa-a">Every audit record is signed with HMAC-SHA256 and chained to the previous record's hash — identical to blockchain integrity verification. Any modification to any record breaks the chain and triggers a TAMPER_DETECTED alert. Run Chain Integrity Verification from the Audit Trail page at any time.</div>
+        <div class="qa-badge">Audit Trail → Verify Chain Integrity</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">"What is your mean time to detect and remediate patch failures?"</div>
+        <div class="qa-a">PatchMortem measures MTTD (time from patch application to failure detection) and MTTR (time from detection to completed rollback) from the audit trail in real time. These metrics appear on the SLA dashboard with historical trends and breach history.</div>
+        <div class="qa-badge">SLA → MTTD / MTTR Dashboard</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q">"What compliance frameworks do you currently satisfy?"</div>
+        <div class="qa-a">PatchMortem generates one-click compliance reports for PCI DSS 6.3 (patch management), HIPAA 164.312(b) (audit controls), SOC 2 CC7.2 (change management), and RBI IT Framework 2023. Each report includes a compliance score, control-by-control evidence, and an executive summary suitable for board presentation.</div>
+        <div class="qa-badge">Compliance → Generate Report</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: CTA -->
+<section>
+  <div class="container">
+    <div class="cta-box">
+      <div class="eyebrow">Get started</div>
+      <h2>Ready for your RBI audit?</h2>
+      <p>We'll walk your CISO and audit team through a live demonstration — including generating a compliance evidence package from your demo environment in real time.</p>
+      <a href="index.html#demo" class="btn-primary">Request a demo for your RBI audit team →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="inner">
+    <div>
+      <div class="footer-logo">PatchMortem</div>
+      <div class="footer-sub">ZURLUX TECHNOLOGIES PRIVATE LIMITED</div>
+      <div class="footer-sub">© 2026 All rights reserved.</div>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="dpa.html">DPA</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="aup.html">Acceptable Use</a>
+      <a href="rbi-compliance.html">RBI Compliance</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="security.html">Security</a>
+      <a href="status.html">System Status</a>
+      <a href="mailto:contact@patchmortem.com">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
